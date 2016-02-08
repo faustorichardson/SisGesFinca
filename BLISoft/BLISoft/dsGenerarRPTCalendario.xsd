@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGenerarRPTCalendario" targetNamespace="http://tempuri.org/dsGenerarRPTCalendario.xsd" xmlns:mstns="http://tempuri.org/dsGenerarRPTCalendario.xsd" xmlns="http://tempuri.org/dsGenerarRPTCalendario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGenerarRPTCalendario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGenerarRPTCalendario" msprop:Generator_UserDSName="dsGenerarRPTCalendario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCalendario" msprop:Generator_TableClassName="dtCalendarioDataTable" msprop:Generator_TableVarName="tabledtCalendario" msprop:Generator_TablePropName="dtCalendario" msprop:Generator_RowDeletingName="dtCalendarioRowDeleting" msprop:Generator_UserTableName="dtCalendario" msprop:Generator_RowChangingName="dtCalendarioRowChanging" msprop:Generator_RowEvHandlerName="dtCalendarioRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCalendarioRowDeleted" msprop:Generator_RowEvArgName="dtCalendarioRowChangeEvent" msprop:Generator_RowChangedName="dtCalendarioRowChanged" msprop:Generator_RowClassName="dtCalendarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="year" msprop:Generator_ColumnVarNameInTable="columnyear" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:Generator_UserColumnName="year" type="xs:int" minOccurs="0" />
+              <xs:element name="semana" msprop:Generator_ColumnVarNameInTable="columnsemana" msprop:Generator_ColumnPropNameInRow="semana" msprop:Generator_ColumnPropNameInTable="semanaColumn" msprop:Generator_UserColumnName="semana" type="xs:string" minOccurs="0" />
+              <xs:element name="fechadesde" msprop:Generator_ColumnVarNameInTable="columnfechadesde" msprop:Generator_ColumnPropNameInRow="fechadesde" msprop:Generator_ColumnPropNameInTable="fechadesdeColumn" msprop:Generator_UserColumnName="fechadesde" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fechahasta" msprop:Generator_ColumnVarNameInTable="columnfechahasta" msprop:Generator_ColumnPropNameInRow="fechahasta" msprop:Generator_ColumnPropNameInTable="fechahastaColumn" msprop:Generator_UserColumnName="fechahasta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="colorencintado" msprop:Generator_ColumnVarNameInTable="columncolorencintado" msprop:Generator_ColumnPropNameInRow="colorencintado" msprop:Generator_ColumnPropNameInTable="colorencintadoColumn" msprop:Generator_UserColumnName="colorencintado" type="xs:string" minOccurs="0" />
+              <xs:element name="colorcosecha" msprop:Generator_ColumnVarNameInTable="columncolorcosecha" msprop:Generator_ColumnPropNameInRow="colorcosecha" msprop:Generator_ColumnPropNameInTable="colorcosechaColumn" msprop:Generator_UserColumnName="colorcosecha" type="xs:string" minOccurs="0" />
+              <xs:element name="sem10" msprop:Generator_ColumnVarNameInTable="columnsem10" msprop:Generator_ColumnPropNameInRow="sem10" msprop:Generator_ColumnPropNameInTable="sem10Column" msprop:Generator_UserColumnName="sem10" type="xs:string" minOccurs="0" />
+              <xs:element name="sem11" msprop:Generator_ColumnVarNameInTable="columnsem11" msprop:Generator_ColumnPropNameInRow="sem11" msprop:Generator_ColumnPropNameInTable="sem11Column" msprop:Generator_UserColumnName="sem11" type="xs:string" minOccurs="0" />
+              <xs:element name="sem12" msprop:Generator_ColumnVarNameInTable="columnsem12" msprop:Generator_ColumnPropNameInRow="sem12" msprop:Generator_ColumnPropNameInTable="sem12Column" msprop:Generator_UserColumnName="sem12" type="xs:string" minOccurs="0" />
+              <xs:element name="sem13" msprop:Generator_ColumnVarNameInTable="columnsem13" msprop:Generator_ColumnPropNameInRow="sem13" msprop:Generator_ColumnPropNameInTable="sem13Column" msprop:Generator_UserColumnName="sem13" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

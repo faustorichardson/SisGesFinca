@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="BLISoft.Properties.Settings.bliConnectionString" connectionString="server=192.168.0.25;user id=root;password=9z0ghlover;persistsecurityinfo=True;database=bli"
+            providerName="MySql.Data.MySqlClient" />
+        <add name="BLISoft.Properties.Settings.bliConnectionStingReports"
+            connectionString="server=localhost;user id=root;password=*010405;persistsecurityinfo=True;database=bli"
+            providerName="MySql.Data.MySqlClient" />
+        <add name="BLISoft.Properties.Settings.bliConnectionString1last"
+            connectionString="server=localhost;user id=root;password=*010405;database=bli"
+            providerName="MySql.Data.MySqlClient" />
+    </connectionStrings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

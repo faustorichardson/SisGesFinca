@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRptCosecha" targetNamespace="http://tempuri.org/dsRptCosecha.xsd" xmlns:mstns="http://tempuri.org/dsRptCosecha.xsd" xmlns="http://tempuri.org/dsRptCosecha.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRptCosecha" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsRptCosecha" msprop:Generator_UserDSName="dsRptCosecha">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCosecha" msprop:Generator_TableClassName="dtCosechaDataTable" msprop:Generator_TableVarName="tabledtCosecha" msprop:Generator_TablePropName="dtCosecha" msprop:Generator_RowDeletingName="dtCosechaRowDeleting" msprop:Generator_UserTableName="dtCosecha" msprop:Generator_RowChangingName="dtCosechaRowChanging" msprop:Generator_RowEvHandlerName="dtCosechaRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCosechaRowDeleted" msprop:Generator_RowEvArgName="dtCosechaRowChangeEvent" msprop:Generator_RowChangedName="dtCosechaRowChanged" msprop:Generator_RowClassName="dtCosechaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Semana" msprop:Generator_ColumnVarNameInTable="columnSemana" msprop:Generator_ColumnPropNameInRow="Semana" msprop:Generator_ColumnPropNameInTable="SemanaColumn" msprop:Generator_UserColumnName="Semana" type="xs:string" minOccurs="0" />
+              <xs:element name="Campo" msprop:Generator_ColumnVarNameInTable="columnCampo" msprop:Generator_ColumnPropNameInRow="Campo" msprop:Generator_ColumnPropNameInTable="CampoColumn" msprop:Generator_UserColumnName="Campo" type="xs:string" minOccurs="0" />
+              <xs:element name="Verde" msprop:Generator_ColumnVarNameInTable="columnVerde" msprop:Generator_ColumnPropNameInRow="Verde" msprop:Generator_ColumnPropNameInTable="VerdeColumn" msprop:Generator_UserColumnName="Verde" type="xs:int" minOccurs="0" />
+              <xs:element name="Azul" msprop:Generator_ColumnVarNameInTable="columnAzul" msprop:Generator_ColumnPropNameInRow="Azul" msprop:Generator_ColumnPropNameInTable="AzulColumn" msprop:Generator_UserColumnName="Azul" type="xs:int" minOccurs="0" />
+              <xs:element name="Amarilla" msprop:Generator_ColumnVarNameInTable="columnAmarilla" msprop:Generator_ColumnPropNameInRow="Amarilla" msprop:Generator_ColumnPropNameInTable="AmarillaColumn" msprop:Generator_UserColumnName="Amarilla" type="xs:int" minOccurs="0" />
+              <xs:element name="Marron" msprop:Generator_ColumnVarNameInTable="columnMarron" msprop:Generator_ColumnPropNameInRow="Marron" msprop:Generator_ColumnPropNameInTable="MarronColumn" msprop:Generator_UserColumnName="Marron" type="xs:int" minOccurs="0" />
+              <xs:element name="Gris" msprop:Generator_ColumnVarNameInTable="columnGris" msprop:Generator_ColumnPropNameInRow="Gris" msprop:Generator_ColumnPropNameInTable="GrisColumn" msprop:Generator_UserColumnName="Gris" type="xs:int" minOccurs="0" />
+              <xs:element name="Roja" msprop:Generator_ColumnVarNameInTable="columnRoja" msprop:Generator_ColumnPropNameInRow="Roja" msprop:Generator_ColumnPropNameInTable="RojaColumn" msprop:Generator_UserColumnName="Roja" type="xs:int" minOccurs="0" />
+              <xs:element name="Blanca" msprop:Generator_ColumnVarNameInTable="columnBlanca" msprop:Generator_ColumnPropNameInRow="Blanca" msprop:Generator_ColumnPropNameInTable="BlancaColumn" msprop:Generator_UserColumnName="Blanca" type="xs:int" minOccurs="0" />
+              <xs:element name="Negra" msprop:Generator_ColumnVarNameInTable="columnNegra" msprop:Generator_ColumnPropNameInRow="Negra" msprop:Generator_ColumnPropNameInTable="NegraColumn" msprop:Generator_UserColumnName="Negra" type="xs:int" minOccurs="0" />
+              <xs:element name="RVerde" msprop:Generator_ColumnVarNameInTable="columnRVerde" msprop:Generator_ColumnPropNameInRow="RVerde" msprop:Generator_ColumnPropNameInTable="RVerdeColumn" msprop:Generator_UserColumnName="RVerde" type="xs:int" minOccurs="0" />
+              <xs:element name="RAzul" msprop:Generator_ColumnVarNameInTable="columnRAzul" msprop:Generator_ColumnPropNameInRow="RAzul" msprop:Generator_ColumnPropNameInTable="RAzulColumn" msprop:Generator_UserColumnName="RAzul" type="xs:int" minOccurs="0" />
+              <xs:element name="RAmarilla" msprop:Generator_ColumnVarNameInTable="columnRAmarilla" msprop:Generator_ColumnPropNameInRow="RAmarilla" msprop:Generator_ColumnPropNameInTable="RAmarillaColumn" msprop:Generator_UserColumnName="RAmarilla" type="xs:int" minOccurs="0" />
+              <xs:element name="RMarron" msprop:Generator_ColumnVarNameInTable="columnRMarron" msprop:Generator_ColumnPropNameInRow="RMarron" msprop:Generator_ColumnPropNameInTable="RMarronColumn" msprop:Generator_UserColumnName="RMarron" type="xs:int" minOccurs="0" />
+              <xs:element name="RGris" msprop:Generator_ColumnVarNameInTable="columnRGris" msprop:Generator_ColumnPropNameInRow="RGris" msprop:Generator_ColumnPropNameInTable="RGrisColumn" msprop:Generator_UserColumnName="RGris" type="xs:int" minOccurs="0" />
+              <xs:element name="RRoja" msprop:Generator_ColumnVarNameInTable="columnRRoja" msprop:Generator_ColumnPropNameInRow="RRoja" msprop:Generator_ColumnPropNameInTable="RRojaColumn" msprop:Generator_UserColumnName="RRoja" type="xs:int" minOccurs="0" />
+              <xs:element name="RBlanca" msprop:Generator_ColumnVarNameInTable="columnRBlanca" msprop:Generator_ColumnPropNameInRow="RBlanca" msprop:Generator_ColumnPropNameInTable="RBlancaColumn" msprop:Generator_UserColumnName="RBlanca" type="xs:int" minOccurs="0" />
+              <xs:element name="RNegra" msprop:Generator_ColumnVarNameInTable="columnRNegra" msprop:Generator_ColumnPropNameInRow="RNegra" msprop:Generator_ColumnPropNameInTable="RNegraColumn" msprop:Generator_UserColumnName="RNegra" type="xs:int" minOccurs="0" />
+              <xs:element name="CantidadTotal" msprop:Generator_ColumnVarNameInTable="columnCantidadTotal" msprop:Generator_ColumnPropNameInRow="CantidadTotal" msprop:Generator_ColumnPropNameInTable="CantidadTotalColumn" msprop:Generator_UserColumnName="CantidadTotal" type="xs:int" minOccurs="0" />
+              <xs:element name="CantidadRechazos" msprop:Generator_ColumnVarNameInTable="columnCantidadRechazos" msprop:Generator_ColumnPropNameInRow="CantidadRechazos" msprop:Generator_ColumnPropNameInTable="CantidadRechazosColumn" msprop:Generator_UserColumnName="CantidadRechazos" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

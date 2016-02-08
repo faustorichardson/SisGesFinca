@@ -1,0 +1,34 @@
+            // Step 1 
+	    MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+            // Step 2
+            MyConexion.Open();
+
+            // Step 3
+            MySqlCommand MyCommand = new MySqlCommand("SELECT departamento_id, departamento_descripcion FROM departamentos ORDER BY departamento_descripcion ASC", MyConexion);
+
+            // Step 4
+            MySqlDataReader MyReader;
+            MyReader = MyCommand.ExecuteReader();
+
+            // Step 5
+            DataTable MyDataTable = new DataTable();
+            MyDataTable.Columns.Add("departamento_id", typeof(int));
+            MyDataTable.Columns.Add("departamento_descripcion", typeof(string));
+            MyDataTable.Load(MyReader);
+
+            // Step 6
+            cmbDepartamento.ValueMember = "departamento_id";
+            cmbDepartamento.DisplayMember = "departamento_descripcion";
+            cmbDepartamento.DataSource = MyDataTable;
+
+            // Step 7
+            MyConexion.Close();
+
+
+
+	private void cmbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string idDepartamento = cmbDepartamento.SelectedValue.ToString();
+            //MessageBox.Show(idDepartamento);
+        }

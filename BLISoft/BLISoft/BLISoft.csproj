@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0FEA2A22-7B1F-400E-8D8D-E8DE0264C8BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLISoft</RootNamespace>
+    <AssemblyName>BLISoft</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Xaml-Icon-Studio-Agriculture-Farmer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>127A6A4FEA8F76E7435DCBE8FF33141FE8F87481</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BLISoft_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Data.Schema, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Data.Schema.UnitTesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bliDSCamposGridView.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bliDSCamposGridView.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DatabaseSetup.cs" />
+    <Compile Include="dsCalendarioCosecha.cs">
+      <DependentUpon>dsCalendarioCosecha.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsCalendarioCosecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCalendarioCosecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCampos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCampos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCamposFRMEmbolse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCamposFRMEmbolse.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCategoriasProductos.cs">
+      <DependentUpon>dsCategoriasProductos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsCategoriasProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCategoriasProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsClientes.cs">
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCosecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCosecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsEmbolse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmbolse.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsFillComboCampos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFillComboCampos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsFillCombosCamposCosecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFillCombosCamposCosecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsFillCombosCosechaCinta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFillCombosCosechaCinta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsGenerarRPTCalendario.cs">
+      <DependentUpon>dsGenerarRPTCalendario.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsGenerarRPTCalendario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGenerarRPTCalendario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsInsumos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInsumos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRptCosecha.cs">
+      <DependentUpon>dsRptCosecha.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsRptCosecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRptCosecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSubCategorias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSubCategorias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSuplidores.cs">
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsSuplidores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsUnidadesMedidas.cs">
+      <DependentUpon>dsUnidadesMedidas.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsUnidadesMedidas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUnidadesMedidas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGnrRptCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGnrRptCalendario.Designer.cs">
+      <DependentUpon>frmGnrRptCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGnrRptCosecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGnrRptCosecha.Designer.cs">
+      <DependentUpon>frmGnrRptCosecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGnrRptEmbolse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGnrRptEmbolse.Designer.cs">
+      <DependentUpon>frmGnrRptEmbolse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGnrRptSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGnrRptSuplidores.Designer.cs">
+      <DependentUpon>frmGnrRptSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsumos.Designer.cs">
+      <DependentUpon>frmInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalendarioEncintado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendarioEncintado.Designer.cs">
+      <DependentUpon>frmCalendarioEncintado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCampos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCampos.Designer.cs">
+      <DependentUpon>frmCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintCalendarioEncintado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintCalendarioEncintado.Designer.cs">
+      <DependentUpon>frmPrintCalendarioEncintado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintCampos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintCampos.Designer.cs">
+      <DependentUpon>frmPrintCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintCosecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintCosecha.Designer.cs">
+      <DependentUpon>frmPrintCosecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrinter.Designer.cs">
+      <DependentUpon>frmPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintUnidadesMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintUnidadesMedidas.Designer.cs">
+      <DependentUpon>frmPrintUnidadesMedidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroCosecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroCosecha.Designer.cs">
+      <DependentUpon>frmRegistroCosecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroEmbolse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroEmbolse.Designer.cs">
+      <DependentUpon>frmRegistroEmbolse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroExportacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroExportacion.Designer.cs">
+      <DependentUpon>frmRegistroExportacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroProductos.Designer.cs">
+      <DependentUpon>frmRegistroProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroSuplidores.Designer.cs">
+      <DependentUpon>frmRegistroSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubCategoria.Designer.cs">
+      <DependentUpon>frmSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnidadesMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnidadesMedidas.Designer.cs">
+      <DependentUpon>frmUnidadesMedidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTES\rptCalendario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCalendario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptCategoriasProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCategoriasProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptCosechaCampo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCosechaCampo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptEmbolse.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmbolse.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptListadoInsumos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListadoInsumos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptSubCategorias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSubCategorias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptSuplidores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSuplidores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\rptUnidadesMedidas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUnidadesMedidas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCalendarioEncintado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCalendarioEncintado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCampos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCampos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCosecha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCosecha.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendarioEncintado.resx">
+      <DependentUpon>frmCalendarioEncintado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCampos.resx">
+      <DependentUpon>frmCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGnrRptCalendario.resx">
+      <DependentUpon>frmGnrRptCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGnrRptCosecha.resx">
+      <DependentUpon>frmGnrRptCosecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGnrRptEmbolse.resx">
+      <DependentUpon>frmGnrRptEmbolse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGnrRptSuplidores.resx">
+      <DependentUpon>frmGnrRptSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsumos.resx">
+      <DependentUpon>frmInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintCalendarioEncintado.resx">
+      <DependentUpon>frmPrintCalendarioEncintado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintCampos.resx">
+      <DependentUpon>frmPrintCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintCosecha.resx">
+      <DependentUpon>frmPrintCosecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrinter.resx">
+      <DependentUpon>frmPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintUnidadesMedidas.resx">
+      <DependentUpon>frmPrintUnidadesMedidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroCosecha.resx">
+      <DependentUpon>frmRegistroCosecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroEmbolse.resx">
+      <DependentUpon>frmRegistroEmbolse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroExportacion.resx">
+      <DependentUpon>frmRegistroExportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroProductos.resx">
+      <DependentUpon>frmRegistroProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroSuplidores.resx">
+      <DependentUpon>frmRegistroSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubCategoria.resx">
+      <DependentUpon>frmSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnidadesMedidas.resx">
+      <DependentUpon>frmUnidadesMedidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORTES\rptCalendario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCalendario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptCategoriasProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCategoriasProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptCosechaCampo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCosechaCampo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptEmbolse.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmbolse.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptListadoInsumos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListadoInsumos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptSubCategorias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSubCategorias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptSuplidores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSuplidores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\rptUnidadesMedidas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUnidadesMedidas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCalendarioEncintado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCalendarioEncintado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCampos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCampos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCosecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCosecha.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bliDSCamposGridView.xsc">
+      <DependentUpon>bliDSCamposGridView.xsd</DependentUpon>
+    </None>
+    <None Include="bliDSCamposGridView.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bliDSCamposGridView.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bliDSCamposGridView.xss">
+      <DependentUpon>bliDSCamposGridView.xsd</DependentUpon>
+    </None>
+    <None Include="BLISoft_TemporaryKey.pfx" />
+    <None Include="dsCalendarioCosecha.xsc">
+      <DependentUpon>dsCalendarioCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsCalendarioCosecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCalendarioCosecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCalendarioCosecha.xss">
+      <DependentUpon>dsCalendarioCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsCampos.xsc">
+      <DependentUpon>dsCampos.xsd</DependentUpon>
+    </None>
+    <None Include="dsCampos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCampos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCampos.xss">
+      <DependentUpon>dsCampos.xsd</DependentUpon>
+    </None>
+    <None Include="dsCamposFRMEmbolse.xsc">
+      <DependentUpon>dsCamposFRMEmbolse.xsd</DependentUpon>
+    </None>
+    <None Include="dsCamposFRMEmbolse.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCamposFRMEmbolse.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCamposFRMEmbolse.xss">
+      <DependentUpon>dsCamposFRMEmbolse.xsd</DependentUpon>
+    </None>
+    <None Include="dsCategoriasProductos.xsc">
+      <DependentUpon>dsCategoriasProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsCategoriasProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCategoriasProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCategoriasProductos.xss">
+      <DependentUpon>dsCategoriasProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsClientes.xsc">
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+    </None>
+    <None Include="dsClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsClientes.xss">
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+    </None>
+    <None Include="dsCosecha.xsc">
+      <DependentUpon>dsCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsCosecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCosecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCosecha.xss">
+      <DependentUpon>dsCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsEmbolse.xsc">
+      <DependentUpon>dsEmbolse.xsd</DependentUpon>
+    </None>
+    <None Include="dsEmbolse.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmbolse.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsEmbolse.xss">
+      <DependentUpon>dsEmbolse.xsd</DependentUpon>
+    </None>
+    <None Include="dsFillComboCampos.xsc">
+      <DependentUpon>dsFillComboCampos.xsd</DependentUpon>
+    </None>
+    <None Include="dsFillComboCampos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFillComboCampos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsFillComboCampos.xss">
+      <DependentUpon>dsFillComboCampos.xsd</DependentUpon>
+    </None>
+    <None Include="dsFillCombosCamposCosecha.xsc">
+      <DependentUpon>dsFillCombosCamposCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsFillCombosCamposCosecha.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFillCombosCamposCosecha.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsFillCombosCamposCosecha.xss">
+      <DependentUpon>dsFillCombosCamposCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsFillCombosCosechaCinta.xsc">
+      <DependentUpon>dsFillCombosCosechaCinta.xsd</DependentUpon>
+    </None>
+    <None Include="dsFillCombosCosechaCinta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFillCombosCosechaCinta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsFillCombosCosechaCinta.xss">
+      <DependentUpon>dsFillCombosCosechaCinta.xsd</DependentUpon>
+    </None>
+    <None Include="dsGenerarRPTCalendario.xsc">
+      <DependentUpon>dsGenerarRPTCalendario.xsd</DependentUpon>
+    </None>
+    <None Include="dsGenerarRPTCalendario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGenerarRPTCalendario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsGenerarRPTCalendario.xss">
+      <DependentUpon>dsGenerarRPTCalendario.xsd</DependentUpon>
+    </None>
+    <None Include="dsInsumos.xsc">
+      <DependentUpon>dsInsumos.xsd</DependentUpon>
+    </None>
+    <None Include="dsInsumos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInsumos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsInsumos.xss">
+      <DependentUpon>dsInsumos.xsd</DependentUpon>
+    </None>
+    <None Include="dsProductos.xsc">
+      <DependentUpon>dsProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsProductos.xss">
+      <DependentUpon>dsProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCosecha.xsc">
+      <DependentUpon>dsRptCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsRptCosecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRptCosecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsRptCosecha.xss">
+      <DependentUpon>dsRptCosecha.xsd</DependentUpon>
+    </None>
+    <None Include="dsSubCategorias.xsc">
+      <DependentUpon>dsSubCategorias.xsd</DependentUpon>
+    </None>
+    <None Include="dsSubCategorias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSubCategorias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsSubCategorias.xss">
+      <DependentUpon>dsSubCategorias.xsd</DependentUpon>
+    </None>
+    <None Include="dsSuplidores.xsc">
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
+    </None>
+    <None Include="dsSuplidores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSuplidores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsSuplidores.xss">
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
+    </None>
+    <None Include="dsUnidadesMedidas.xsc">
+      <DependentUpon>dsUnidadesMedidas.xsd</DependentUpon>
+    </None>
+    <None Include="dsUnidadesMedidas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUnidadesMedidas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsUnidadesMedidas.xss">
+      <DependentUpon>dsUnidadesMedidas.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Farmer.ico" />
+    <Content Include="Xaml-Icon-Studio-Agriculture-Farmer.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

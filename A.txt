@@ -1,0 +1,5 @@
+
+frmRegistroExportacion
+=> boton imprimir
+=> boton cancelar
+=> boton buscar

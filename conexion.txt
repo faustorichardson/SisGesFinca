@@ -1,0 +1,1 @@
+MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");

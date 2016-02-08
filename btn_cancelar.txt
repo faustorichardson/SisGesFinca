@@ -1,0 +1,17 @@
+            if (txtNombreCampo.Text != "")
+            {
+                DialogResult Result =
+                MessageBox.Show("Se perderan Los cambios Realizados" + System.Environment.NewLine + "Desea Guardar los Cambios", "Sistema Gestion de Plantaciones v1.0", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+                switch (Result)
+                {
+                    case DialogResult.Yes:
+                        cModo = "Actualiza";
+                        btnGrabar_Click(sender, e);
+                        break;
+                }
+            }
+
+            this.Limpiar();
+            this.cModo = "Inicio";
+            this.Botones();

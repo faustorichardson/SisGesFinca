@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCampos" targetNamespace="http://tempuri.org/dsCampos.xsd" xmlns:mstns="http://tempuri.org/dsCampos.xsd" xmlns="http://tempuri.org/dsCampos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCampos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCampos" msprop:Generator_UserDSName="dsCampos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCampos" msprop:Generator_TableClassName="dtCamposDataTable" msprop:Generator_TableVarName="tabledtCampos" msprop:Generator_TablePropName="dtCampos" msprop:Generator_RowDeletingName="dtCamposRowDeleting" msprop:Generator_UserTableName="dtCampos" msprop:Generator_RowChangingName="dtCamposRowChanging" msprop:Generator_RowEvHandlerName="dtCamposRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCamposRowDeleted" msprop:Generator_RowEvArgName="dtCamposRowChangeEvent" msprop:Generator_RowChangedName="dtCamposRowChanged" msprop:Generator_RowClassName="dtCamposRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_campo" msprop:Generator_ColumnVarNameInTable="columnid_campo" msprop:Generator_ColumnPropNameInRow="id_campo" msprop:Generator_ColumnPropNameInTable="id_campoColumn" msprop:Generator_UserColumnName="id_campo" type="xs:int" minOccurs="0" />
+              <xs:element name="desc_campo" msprop:Generator_ColumnVarNameInTable="columndesc_campo" msprop:Generator_ColumnPropNameInRow="desc_campo" msprop:Generator_ColumnPropNameInTable="desc_campoColumn" msprop:Generator_UserColumnName="desc_campo" type="xs:string" minOccurs="0" />
+              <xs:element name="areacampo" msprop:Generator_ColumnVarNameInTable="columnareacampo" msprop:Generator_ColumnPropNameInRow="areacampo" msprop:Generator_ColumnPropNameInTable="areacampoColumn" msprop:Generator_UserColumnName="areacampo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="areasembrada" msprop:Generator_ColumnVarNameInTable="columnareasembrada" msprop:Generator_ColumnPropNameInRow="areasembrada" msprop:Generator_ColumnPropNameInTable="areasembradaColumn" msprop:Generator_UserColumnName="areasembrada" type="xs:decimal" minOccurs="0" />
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad" type="xs:int" minOccurs="0" />
+              <xs:element name="lineas" msprop:Generator_ColumnVarNameInTable="columnlineas" msprop:Generator_ColumnPropNameInRow="lineas" msprop:Generator_ColumnPropNameInTable="lineasColumn" msprop:Generator_UserColumnName="lineas" type="xs:int" minOccurs="0" />
+              <xs:element name="plantas" msprop:Generator_ColumnVarNameInTable="columnplantas" msprop:Generator_ColumnPropNameInRow="plantas" msprop:Generator_ColumnPropNameInTable="plantasColumn" msprop:Generator_UserColumnName="plantas" type="xs:int" minOccurs="0" />
+              <xs:element name="aspersores" msprop:Generator_ColumnVarNameInTable="columnaspersores" msprop:Generator_ColumnPropNameInRow="aspersores" msprop:Generator_ColumnPropNameInTable="aspersoresColumn" msprop:Generator_UserColumnName="aspersores" type="xs:int" minOccurs="0" />
+              <xs:element name="mangueras" msprop:Generator_ColumnVarNameInTable="columnmangueras" msprop:Generator_ColumnPropNameInRow="mangueras" msprop:Generator_ColumnPropNameInTable="manguerasColumn" msprop:Generator_UserColumnName="mangueras" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

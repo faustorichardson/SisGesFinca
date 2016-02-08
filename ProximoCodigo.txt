@@ -1,0 +1,28 @@
+            try
+            {
+                // Step 1 - Connection stablished
+                MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                // Step 2 - Create command
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - Set the commanndtext property
+                MyCommand.CommandText = "SELECT count(*) FROM departamentos";
+
+                // Step 4 - Open connection
+                MyConexion.Open();
+
+                // Step 5 - Execute the SQL Statement y Asigno el valor resultante a la variable "codigo"
+                int codigo;
+                codigo = Convert.ToInt32(MyCommand.ExecuteScalar());
+                codigo = codigo + 1;
+                txtIDDepartamento.Text = Convert.ToString(codigo);
+                txtDepartamento.Focus();
+
+                // Step 5 - Close the connection
+                MyConexion.Close();
+            }
+            catch (MySqlException MyEx)
+            {
+                MessageBox.Show(MyEx.Message);                
+            }

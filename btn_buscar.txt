@@ -1,0 +1,191 @@
+=======
+BUSQUEDA - SUM or COUNT
+=======
+
+
+            if (txtIDDepartamento.Text == "")
+            {
+                MessageBox.Show("No se permiten busquedas vacias...");
+                txtIDDepartamento.Focus();
+            }
+            else
+            {
+                try
+                {
+                    // Step 1 - Conexion
+                    MySqlConnection MyConexion = new MySqlConnection("Server=localhost;Database=mdeg_dispensariomedico;Uid=root;Pwd=*010405;");                    
+
+                    // Step 2 
+                    MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                    // Step 3
+                    MyCommand.CommandText = "SELECT departamento_descripcion FROM departamentos WHERE departamento_id = " + txtIDDepartamento.Text + "";
+
+                    // Step 4
+                    MyConexion.Open();
+
+                    // Step 5
+                    string MyText = Convert.ToString(MyCommand.ExecuteScalar());
+
+                    // Step 6
+                    this.txtDepartamento.Text = MyText;
+
+                    // Step 7
+                    MyConexion.Close();
+                    
+                }
+                catch (Exception MyEx)
+                {
+                    MessageBox.Show(MyEx.Message);
+                }
+            }
+                if (txtDepartamento.Text == "")
+                {
+                    MessageBox.Show("No se encontraron registros...");
+                    this.cModo = "Inicio";
+                    this.Botones();
+                    this.Limpiar();
+                    this.txtIDDepartamento.Focus();
+                }
+                else
+                {
+                    this.cModo = "Buscar";
+                    this.Botones();                    
+                }
+
+
+=======
+BUSQUEDA - VARIOUS VALUES
+=======
+
+            if (txtID.Text == "")
+            {
+                MessageBox.Show("No se permiten busquedas vacias...");
+                txtID.Focus();
+            }
+            else
+            {
+                try
+                {
+                    // Step 1 - Conexion
+                    MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    MyCommand.CommandText = "SELECT id_campo, desc_campo, areacampo, areasembrada "+
+                        "FROM campos WHERE id_campo = " + txtID.Text + "";
+
+                    // Step 4 - connection open
+                    MyConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MySqlDataReader MyReader = MyCommand.ExecuteReader();                    
+
+                    // Step 6 - Verifying if Reader has rows
+                    if (MyReader.HasRows)
+                    {
+                        while (MyReader.Read())
+                        {
+                            txtNombreCampo.Text = MyReader["desc_campo"].ToString();
+                            txtArea.Text = MyReader["areacampo"].ToString();
+                            txtAreaSembrada.Text = MyReader["areasembrada"].ToString();
+                        }
+
+                        this.cModo = "Buscar";
+                        this.Botones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros...");
+                        this.cModo = "Inicio";
+                        this.Botones();
+                        this.Limpiar();
+                        this.txtID.Focus();
+                    }
+                    
+                    // Step 6 - Closing all
+                    MyReader.Close();
+                    MyCommand.Dispose();
+                    MyConexion.Close();
+
+                }
+                catch (Exception MyEx)
+                {
+                    MessageBox.Show(MyEx.Message);
+                }
+	}
+
+
+============
+BUSQUEDAS CON FECHAS
+============
+
+            if (txtYear.Text == "" || txtSemana.Text == "")
+            {
+                MessageBox.Show("No se permiten busquedas sin argumentos...");
+                txtYear.Focus();
+            }
+            else
+            {
+                try
+                {
+                    // Step 1 - Conexion
+                    MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    MyCommand.CommandText = "SELECT year, semana, fechadesde, fechahasta, colorencintado, colorcosecha " +
+                        "FROM calendarioencintado WHERE year = " + txtYear.Text + " AND semana = " + txtSemana.Text + "";
+
+                    // Step 4 - connection open
+                    MyConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                    // Step 6 - Verifying if Reader has rows
+                    if (MyReader.HasRows)
+                    {
+                        while (MyReader.Read())
+                        {
+                            txtYear.Text = MyReader["year"].ToString();
+                            txtSemana.Text = MyReader["semana"].ToString();
+                            fechaDesde.Value = Convert.ToDateTime(MyReader["fechadesde"]);
+                            fechaHasta.Value = Convert.ToDateTime(MyReader["fechahasta"]);
+                            cmbColorCinta.SelectedValue = MyReader["colorencintado"].ToString();
+                            cmbColorCosecha.SelectedValue = MyReader["colorcosecha"].ToString();                            
+                        }
+
+                        this.cModo = "Buscar";
+                        this.Botones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros...");
+                        this.cModo = "Inicio";
+                        this.Botones();
+                        this.Limpiar();
+                        this.txtYear.Focus();
+                    }
+
+                    // Step 6 - Closing all
+                    MyReader.Close();
+                    MyCommand.Dispose();
+                    MyConexion.Close();
+
+                }
+                catch (Exception MyEx)
+                {
+                    MessageBox.Show(MyEx.Message);
+                }
+
+
+
+            }
+
+
+

@@ -1,0 +1,3 @@
+            this.Limpiar();
+            cModo = "Inicio";
+            this.Botones();

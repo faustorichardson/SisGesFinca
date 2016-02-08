@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsEmbolse" targetNamespace="http://tempuri.org/dsEmbolse.xsd" xmlns:mstns="http://tempuri.org/dsEmbolse.xsd" xmlns="http://tempuri.org/dsEmbolse.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsEmbolse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsEmbolse" msprop:Generator_UserDSName="dsEmbolse">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtEmbolse" msprop:Generator_TableClassName="dtEmbolseDataTable" msprop:Generator_TableVarName="tabledtEmbolse" msprop:Generator_TablePropName="dtEmbolse" msprop:Generator_RowDeletingName="dtEmbolseRowDeleting" msprop:Generator_UserTableName="dtEmbolse" msprop:Generator_RowChangingName="dtEmbolseRowChanging" msprop:Generator_RowEvHandlerName="dtEmbolseRowChangeEventHandler" msprop:Generator_RowDeletedName="dtEmbolseRowDeleted" msprop:Generator_RowEvArgName="dtEmbolseRowChangeEvent" msprop:Generator_RowChangedName="dtEmbolseRowChanged" msprop:Generator_RowClassName="dtEmbolseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="semana" msprop:Generator_ColumnVarNameInTable="columnsemana" msprop:Generator_ColumnPropNameInRow="semana" msprop:Generator_ColumnPropNameInTable="semanaColumn" msprop:Generator_UserColumnName="semana" type="xs:string" minOccurs="0" />
+              <xs:element name="color" msprop:Generator_ColumnVarNameInTable="columncolor" msprop:Generator_ColumnPropNameInRow="color" msprop:Generator_ColumnPropNameInTable="colorColumn" msprop:Generator_UserColumnName="color" type="xs:string" minOccurs="0" />
+              <xs:element name="cmp1" msprop:Generator_ColumnVarNameInTable="columncmp1" msprop:Generator_ColumnPropNameInRow="cmp1" msprop:Generator_ColumnPropNameInTable="cmp1Column" msprop:Generator_UserColumnName="cmp1" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp2" msprop:Generator_ColumnVarNameInTable="columncmp2" msprop:Generator_ColumnPropNameInRow="cmp2" msprop:Generator_ColumnPropNameInTable="cmp2Column" msprop:Generator_UserColumnName="cmp2" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp3" msprop:Generator_ColumnVarNameInTable="columncmp3" msprop:Generator_ColumnPropNameInRow="cmp3" msprop:Generator_ColumnPropNameInTable="cmp3Column" msprop:Generator_UserColumnName="cmp3" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp4" msprop:Generator_ColumnVarNameInTable="columncmp4" msprop:Generator_ColumnPropNameInRow="cmp4" msprop:Generator_ColumnPropNameInTable="cmp4Column" msprop:Generator_UserColumnName="cmp4" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp5" msprop:Generator_ColumnVarNameInTable="columncmp5" msprop:Generator_ColumnPropNameInRow="cmp5" msprop:Generator_ColumnPropNameInTable="cmp5Column" msprop:Generator_UserColumnName="cmp5" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp6" msprop:Generator_ColumnVarNameInTable="columncmp6" msprop:Generator_ColumnPropNameInRow="cmp6" msprop:Generator_ColumnPropNameInTable="cmp6Column" msprop:Generator_UserColumnName="cmp6" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp7" msprop:Generator_ColumnVarNameInTable="columncmp7" msprop:Generator_ColumnPropNameInRow="cmp7" msprop:Generator_ColumnPropNameInTable="cmp7Column" msprop:Generator_UserColumnName="cmp7" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp8" msprop:Generator_ColumnVarNameInTable="columncmp8" msprop:Generator_ColumnPropNameInRow="cmp8" msprop:Generator_ColumnPropNameInTable="cmp8Column" msprop:Generator_UserColumnName="cmp8" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp9" msprop:Generator_ColumnVarNameInTable="columncmp9" msprop:Generator_ColumnPropNameInRow="cmp9" msprop:Generator_ColumnPropNameInTable="cmp9Column" msprop:Generator_UserColumnName="cmp9" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp10" msprop:Generator_ColumnVarNameInTable="columncmp10" msprop:Generator_ColumnPropNameInRow="cmp10" msprop:Generator_ColumnPropNameInTable="cmp10Column" msprop:Generator_UserColumnName="cmp10" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp11" msprop:Generator_ColumnVarNameInTable="columncmp11" msprop:Generator_ColumnPropNameInRow="cmp11" msprop:Generator_ColumnPropNameInTable="cmp11Column" msprop:Generator_UserColumnName="cmp11" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp12" msprop:Generator_ColumnVarNameInTable="columncmp12" msprop:Generator_ColumnPropNameInRow="cmp12" msprop:Generator_ColumnPropNameInTable="cmp12Column" msprop:Generator_UserColumnName="cmp12" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp13" msprop:Generator_ColumnVarNameInTable="columncmp13" msprop:Generator_ColumnPropNameInRow="cmp13" msprop:Generator_ColumnPropNameInTable="cmp13Column" msprop:Generator_UserColumnName="cmp13" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp14" msprop:Generator_ColumnVarNameInTable="columncmp14" msprop:Generator_ColumnPropNameInRow="cmp14" msprop:Generator_ColumnPropNameInTable="cmp14Column" msprop:Generator_UserColumnName="cmp14" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp15" msprop:Generator_ColumnVarNameInTable="columncmp15" msprop:Generator_ColumnPropNameInRow="cmp15" msprop:Generator_ColumnPropNameInTable="cmp15Column" msprop:Generator_UserColumnName="cmp15" type="xs:int" minOccurs="0" />
+              <xs:element name="cmp16" msprop:Generator_ColumnVarNameInTable="columncmp16" msprop:Generator_ColumnPropNameInRow="cmp16" msprop:Generator_ColumnPropNameInTable="cmp16Column" msprop:Generator_UserColumnName="cmp16" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

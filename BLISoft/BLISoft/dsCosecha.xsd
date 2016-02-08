@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCosecha" targetNamespace="http://tempuri.org/dsCosecha.xsd" xmlns:mstns="http://tempuri.org/dsCosecha.xsd" xmlns="http://tempuri.org/dsCosecha.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCosecha" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCosecha" msprop:Generator_UserDSName="dsCosecha">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCosecha" msprop:Generator_TableClassName="dtCosechaDataTable" msprop:Generator_TableVarName="tabledtCosecha" msprop:Generator_TablePropName="dtCosecha" msprop:Generator_RowDeletingName="dtCosechaRowDeleting" msprop:Generator_UserTableName="dtCosecha" msprop:Generator_RowChangingName="dtCosechaRowChanging" msprop:Generator_RowEvHandlerName="dtCosechaRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCosechaRowDeleted" msprop:Generator_RowEvArgName="dtCosechaRowChangeEvent" msprop:Generator_RowChangedName="dtCosechaRowChanged" msprop:Generator_RowClassName="dtCosechaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fechacorte" msdata:DateTimeMode="Local" msprop:Generator_ColumnVarNameInTable="columnfechacorte" msprop:Generator_ColumnPropNameInRow="fechacorte" msprop:Generator_ColumnPropNameInTable="fechacorteColumn" msprop:Generator_UserColumnName="fechacorte" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="semana" msprop:Generator_ColumnVarNameInTable="columnsemana" msprop:Generator_ColumnPropNameInRow="semana" msprop:Generator_ColumnPropNameInTable="semanaColumn" msprop:Generator_UserColumnName="semana" type="xs:string" minOccurs="0" />
+              <xs:element name="calidad" msprop:Generator_ColumnVarNameInTable="columncalidad" msprop:Generator_ColumnPropNameInRow="calidad" msprop:Generator_ColumnPropNameInTable="calidadColumn" msprop:Generator_UserColumnName="calidad" type="xs:string" minOccurs="0" />
+              <xs:element name="campo" msprop:Generator_ColumnVarNameInTable="columncampo" msprop:Generator_ColumnPropNameInRow="campo" msprop:Generator_ColumnPropNameInTable="campoColumn" msprop:Generator_UserColumnName="campo" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_verde" msprop:Generator_ColumnVarNameInTable="columncinta_verde" msprop:Generator_ColumnPropNameInRow="cinta_verde" msprop:Generator_ColumnPropNameInTable="cinta_verdeColumn" msprop:Generator_UserColumnName="cinta_verde" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_azul" msprop:Generator_ColumnVarNameInTable="columncinta_azul" msprop:Generator_ColumnPropNameInRow="cinta_azul" msprop:Generator_ColumnPropNameInTable="cinta_azulColumn" msprop:Generator_UserColumnName="cinta_azul" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_amarilla" msprop:Generator_ColumnVarNameInTable="columncinta_amarilla" msprop:Generator_ColumnPropNameInRow="cinta_amarilla" msprop:Generator_ColumnPropNameInTable="cinta_amarillaColumn" msprop:Generator_UserColumnName="cinta_amarilla" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_marron" msprop:Generator_ColumnVarNameInTable="columncinta_marron" msprop:Generator_ColumnPropNameInRow="cinta_marron" msprop:Generator_ColumnPropNameInTable="cinta_marronColumn" msprop:Generator_UserColumnName="cinta_marron" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_gris" msprop:Generator_ColumnVarNameInTable="columncinta_gris" msprop:Generator_ColumnPropNameInRow="cinta_gris" msprop:Generator_ColumnPropNameInTable="cinta_grisColumn" msprop:Generator_UserColumnName="cinta_gris" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_roja" msprop:Generator_ColumnVarNameInTable="columncinta_roja" msprop:Generator_ColumnPropNameInRow="cinta_roja" msprop:Generator_ColumnPropNameInTable="cinta_rojaColumn" msprop:Generator_UserColumnName="cinta_roja" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_blanca" msprop:Generator_ColumnVarNameInTable="columncinta_blanca" msprop:Generator_ColumnPropNameInRow="cinta_blanca" msprop:Generator_ColumnPropNameInTable="cinta_blancaColumn" msprop:Generator_UserColumnName="cinta_blanca" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_negra" msprop:Generator_ColumnVarNameInTable="columncinta_negra" msprop:Generator_ColumnPropNameInRow="cinta_negra" msprop:Generator_ColumnPropNameInTable="cinta_negraColumn" msprop:Generator_UserColumnName="cinta_negra" type="xs:int" minOccurs="0" />
+              <xs:element name="cantidadtotal" msprop:Generator_ColumnVarNameInTable="columncantidadtotal" msprop:Generator_ColumnPropNameInRow="cantidadtotal" msprop:Generator_ColumnPropNameInTable="cantidadtotalColumn" msprop:Generator_UserColumnName="cantidadtotal" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_verdeR" msprop:Generator_ColumnVarNameInTable="columncinta_verdeR" msprop:Generator_ColumnPropNameInRow="cinta_verdeR" msprop:Generator_ColumnPropNameInTable="cinta_verdeRColumn" msprop:Generator_UserColumnName="cinta_verdeR" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_azulR" msprop:Generator_ColumnVarNameInTable="columncinta_azulR" msprop:Generator_ColumnPropNameInRow="cinta_azulR" msprop:Generator_ColumnPropNameInTable="cinta_azulRColumn" msprop:Generator_UserColumnName="cinta_azulR" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_amarillaR" msprop:Generator_ColumnVarNameInTable="columncinta_amarillaR" msprop:Generator_ColumnPropNameInRow="cinta_amarillaR" msprop:Generator_ColumnPropNameInTable="cinta_amarillaRColumn" msprop:Generator_UserColumnName="cinta_amarillaR" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_grisR" msprop:Generator_ColumnVarNameInTable="columncinta_grisR" msprop:Generator_ColumnPropNameInRow="cinta_grisR" msprop:Generator_ColumnPropNameInTable="cinta_grisRColumn" msprop:Generator_UserColumnName="cinta_grisR" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_rojaR" msprop:Generator_ColumnVarNameInTable="columncinta_rojaR" msprop:Generator_ColumnPropNameInRow="cinta_rojaR" msprop:Generator_ColumnPropNameInTable="cinta_rojaRColumn" msprop:Generator_UserColumnName="cinta_rojaR" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_blancaR" msprop:Generator_ColumnVarNameInTable="columncinta_blancaR" msprop:Generator_ColumnPropNameInRow="cinta_blancaR" msprop:Generator_ColumnPropNameInTable="cinta_blancaRColumn" msprop:Generator_UserColumnName="cinta_blancaR" type="xs:int" minOccurs="0" />
+              <xs:element name="cinta_negraR" msprop:Generator_ColumnVarNameInTable="columncinta_negraR" msprop:Generator_ColumnPropNameInRow="cinta_negraR" msprop:Generator_ColumnPropNameInTable="cinta_negraRColumn" msprop:Generator_UserColumnName="cinta_negraR" type="xs:int" minOccurs="0" />
+              <xs:element name="cantidadrechazos" msprop:Generator_ColumnVarNameInTable="columncantidadrechazos" msprop:Generator_ColumnPropNameInRow="cantidadrechazos" msprop:Generator_ColumnPropNameInTable="cantidadrechazosColumn" msprop:Generator_UserColumnName="cantidadrechazos" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCampos" msprop:Generator_TableClassName="dtCamposDataTable" msprop:Generator_TableVarName="tabledtCampos" msprop:Generator_TablePropName="dtCampos" msprop:Generator_RowDeletingName="dtCamposRowDeleting" msprop:Generator_UserTableName="dtCampos" msprop:Generator_RowChangingName="dtCamposRowChanging" msprop:Generator_RowEvHandlerName="dtCamposRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCamposRowDeleted" msprop:Generator_RowEvArgName="dtCamposRowChangeEvent" msprop:Generator_RowChangedName="dtCamposRowChanged" msprop:Generator_RowClassName="dtCamposRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_campo" msprop:Generator_ColumnVarNameInTable="columnid_campo" msprop:Generator_ColumnPropNameInRow="id_campo" msprop:Generator_ColumnPropNameInTable="id_campoColumn" msprop:Generator_UserColumnName="id_campo" type="xs:int" minOccurs="0" />
+              <xs:element name="desc_campo" msprop:Generator_ColumnVarNameInTable="columndesc_campo" msprop:Generator_ColumnPropNameInRow="desc_campo" msprop:Generator_ColumnPropNameInTable="desc_campoColumn" msprop:Generator_UserColumnName="desc_campo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtCosecha_dtCampos" msdata:parent="dtCosecha" msdata:child="dtCampos" msdata:parentkey="campo" msdata:childkey="id_campo" msprop:Generator_UserChildTable="dtCampos" msprop:Generator_ChildPropName="GetdtCamposRows" msprop:Generator_ParentPropName="dtCosechaRow" msprop:Generator_UserRelationName="dtCosecha_dtCampos" msprop:Generator_RelationVarName="relationdtCosecha_dtCampos" msprop:Generator_UserParentTable="dtCosecha" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

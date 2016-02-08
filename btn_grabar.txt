@@ -1,0 +1,319 @@
+// Step 1 - Creating the connection
+MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+// Step 2 - Crear el comando de ejecucion
+MySqlCommand myCommand = myConexion.CreateCommand();
+
+// Step 3 - Comando a ejecutar
+myCommand.CommandText = 
+    "INSERT INTO estudiantes(matricula, nombre, tipoestudiante, status)" +
+    " values(@matricula,@nombre,@tipoestudiante,@status)";
+myCommand.Parameters.AddWithValue("@matricula", txtMatricula.Text);
+myCommand.Parameters.AddWithValue("@nombre", txtEstudiante.Text);
+if (optionNormal.Checked)
+{
+    myCommand.Parameters.AddWithValue("@tipoestudiante", "N");
+} else if(optionRedes.Checked)
+{
+    myCommand.Parameters.AddWithValue("@tipoestudiante", "R");
+} else if(optionSoftware.Checked)
+{
+    myCommand.Parameters.AddWithValue("@tipoestudiante", "S");
+}
+myCommand.Parameters.AddWithValue("@status", "1");
+
+// Step 4  - Abro la conexion
+myConexion.Open();
+
+// Step 5 - Ejecuto el query
+int numberOfRows = myCommand.ExecuteNonQuery();
+
+// Step 6 - Cierro conexion
+myConexion.Close();
+
+
+=======
+ANOTHER
+=======
+
+            if (txtNombreCampo.Text == "" || txtArea.Text == "" || txtAreaSembrada.Text == "")
+            {
+                MessageBox.Show("No se permiten campos vacios...");
+                txtNombreCampo.Focus();
+            }
+            else
+            {
+                if (cModo == "Nuevo")
+                {
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        // Step 3 - Comando a ejecutar
+                        myCommand.CommandText = "INSERT INTO campos(desc_campo, unidad, areacampo, areasembrada)" +
+                            " values(@descripcion, @unidad, @areacampo, @areasembrada)";
+                        myCommand.Parameters.AddWithValue("@descripcion", txtNombreCampo.Text);
+                        myCommand.Parameters.AddWithValue("@unidad", cmbUnidadMedida.SelectedValue);
+                        myCommand.Parameters.AddWithValue("@areacampo", txtArea.Text);
+                        myCommand.Parameters.AddWithValue("@areasembrada", txtAreaSembrada.Text);
+
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
+
+                        // Step 5 - Executing the query
+                        myCommand.ExecuteNonQuery();
+
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+
+                        MessageBox.Show("Informacion guardada satisfactoriamente...");
+                    }
+                    catch (Exception MyEx)
+                    {
+                        MessageBox.Show(MyEx.Message);
+                    }
+
+                }
+                else
+                {
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        // Step 3 - Comando a ejecutar
+                        myCommand.CommandText = "UPDATE campos SET desc_campo = @descripcion, areacampo = @areacampo, "+
+                            "areasembrada = @areasembrada, unidad = @unidad WHERE id_campo = " + txtID.Text + "";                        
+                        myCommand.Parameters.AddWithValue("@descripcion", txtNombreCampo.Text);
+                        myCommand.Parameters.AddWithValue("@areacampo", txtArea.Text);
+                        myCommand.Parameters.AddWithValue("@areasembrada", txtAreaSembrada.Text);
+                        myCommand.Parameters.AddWithValue("@unidad", cmbUnidadMedida.SelectedValue);
+
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
+
+                        // Step 5 - Executing the query
+                        myCommand.ExecuteNonQuery();
+
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+
+                        MessageBox.Show("Informacion actualizada satisfactoriamente...");
+                    }
+                    catch (Exception MyEx)
+                    {
+                        MessageBox.Show(MyEx.Message);
+                    }
+
+                }
+
+                this.Limpiar();
+                cModo = "Inicio";
+                this.Botones();
+            }
+
+
+===========
+GRABAR CON FECHA
+===========
+
+            if (txtYear.Text == "")
+            {
+                MessageBox.Show("No se permiten campos vacios...");
+                this.txtYear.Focus();
+            }
+
+            if (txtSemana.Text == "")
+            {
+                MessageBox.Show("No se permiten campos vacios...");
+                this.txtSemana.Focus();
+            }
+            else
+            {
+                if (cModo == "Nuevo")
+                {
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        // Step 3 - Comando a ejecutar                        
+                        myCommand.CommandText = "INSERT INTO calendarioencintado(year, semana, fechadesde, " +
+                            "fechahasta, colorencintado, colorcosecha) values(@year, @semana, @fechadesde, " +
+                            "@fechahasta, @colorencintado, @colorcosecha)";
+                        myCommand.Parameters.AddWithValue("@year", txtYear.Text);
+                        myCommand.Parameters.AddWithValue("@semana", txtSemana.Text);
+                        myCommand.Parameters.AddWithValue("@fechadesde", fechaDesde.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fechahasta", fechaHasta.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@colorencintado", cmbColorCinta.SelectedValue);
+                        myCommand.Parameters.AddWithValue("@colorcosecha", cmbColorCosecha.SelectedValue);
+
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
+
+                        // Step 5 - Executing the query
+                        myCommand.ExecuteNonQuery();
+
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+
+                        MessageBox.Show("Informacion guardada satisfactoriamente...");                        
+                        
+                    }
+                    catch (Exception MyEx)
+                    {
+                        MessageBox.Show(MyEx.Message);
+                    }
+
+                }
+                else
+                {
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        // Step 3 - Comando a ejecutar
+                        myCommand.CommandText = "UPDATE calendarioencintado SET year = @year, " +
+                            "semana = @semana, fechadesde = @fechadesde, fechahasta = @fechahasta, " +
+                            "colorencintado = @colorencintado, colorcosecha = @colorcosecha " +
+                            "WHERE year = " + txtYear.Text + " AND semana = " + txtSemana.Text + "";
+                        myCommand.Parameters.AddWithValue("@year", txtYear.Text);
+                        myCommand.Parameters.AddWithValue("@semana", txtSemana.Text);
+                        myCommand.Parameters.AddWithValue("@fechadesde", fechaDesde.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fechahasta", fechaHasta.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@colorencintado", cmbColorCinta.SelectedValue);
+                        myCommand.Parameters.AddWithValue("@colorcosecha", cmbColorCosecha.SelectedValue);
+
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
+
+                        // Step 5 - Executing the query
+                        myCommand.ExecuteNonQuery();
+
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+
+                        MessageBox.Show("Informacion actualizada satisfactoriamente...");
+                    }
+                    catch (Exception MyEx)
+                    {
+                        MessageBox.Show(MyEx.Message);
+                    }
+
+                }
+
+                this.Limpiar();
+                cModo = "Inicio";
+                this.Botones();
+
+===============
+CON GRID
+===============
+
+            if (txtSemana.Text == "")
+            {
+                MessageBox.Show("No se permiten campos vacios...");
+                this.txtSemana.Focus();
+            }
+            else
+            {
+                if (cModo == "Nuevo")
+                {
+                    try
+                    {
+                        for (int n = 0; n < grvCampos.Rows.Count - 1; n++)
+                        {
+                            // Step 1 - Stablishing the connection
+                            MySqlConnection MyConexion = new MySqlConnection("Server=localhost;Database=bli;Uid=root;Pwd=*010405;");
+
+                            // Step 2 - Crear el comando de ejecucion
+                            MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                            // Step 3 - Comando a ejecutar                                                    
+                            string strQuery = "insert into embolse(fecha, semana, colorcinta, campo, cantidadracimos) "+
+                            "values(@fecha, @semana, @colorcinta, "+ grvCampos.Rows[n].Cells[0].Value +", "+ grvCampos.Rows[n].Cells[1].Value +")";
+                            myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                            myCommand.Parameters.AddWithValue("@semana", txtSemana.Text);
+                            myCommand.Parameters.AddWithValue("@colorcinta", cmbColorCinta.SelectedValue);
+                            myCommand.CommandText = strQuery;
+
+                            // Step 4 - Opening the connection
+                            MyConexion.Open();
+
+                            // Step 5 - Executing the query
+                            myCommand.ExecuteNonQuery();
+
+                            // Step 6 - Closing the connection
+                            MyConexion.Close();
+                        }
+
+                        MessageBox.Show("Informacion guardada satisfactoriamente...");
+
+                    }
+                    catch (Exception MyEx)
+                    {
+                        MessageBox.Show(MyEx.Message);
+                    }
+
+                }
+                else
+                {
+                    try
+                    {
+                        //// Step 1 - Stablishing the connection
+                        //MySqlConnection MyConexion = new MySqlConnection("Server=192.168.0.25;Database=bli;Uid=root;Pwd=9z0ghlover;");
+
+                        //// Step 2 - Crear el comando de ejecucion
+                        //MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        //// Step 3 - Comando a ejecutar
+                        //myCommand.CommandText = "UPDATE calendarioencintado SET year = @year, " +
+                        //    "semana = @semana, fechadesde = @fechadesde, fechahasta = @fechahasta, " +
+                        //    "colorencintado = @colorencintado, colorcosecha = @colorcosecha " +
+                        //    "WHERE year = " + txtYear.Text + " AND semana = " + txtSemana.Text + "";
+                        //myCommand.Parameters.AddWithValue("@year", txtYear.Text);
+                        //myCommand.Parameters.AddWithValue("@semana", txtSemana.Text);
+                        //myCommand.Parameters.AddWithValue("@fechadesde", fechaDesde.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        //myCommand.Parameters.AddWithValue("@fechahasta", fechaHasta.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        //myCommand.Parameters.AddWithValue("@colorencintado", cmbColorCinta.SelectedValue);
+                        //myCommand.Parameters.AddWithValue("@colorcosecha", cmbColorCosecha.SelectedValue);
+
+                        //// Step 4 - Opening the connection
+                        //MyConexion.Open();
+
+                        //// Step 5 - Executing the query
+                        //myCommand.ExecuteNonQuery();
+
+                        //// Step 6 - Closing the connection
+                        //MyConexion.Close();
+
+                        //MessageBox.Show("Informacion actualizada satisfactoriamente...");
+                    }
+                    catch (Exception MyEx)
+                    {
+                        MessageBox.Show(MyEx.Message);
+                    }
+
+                }
+
+                this.Limpiar();
+                cModo = "Inicio";
+                this.Botones();
+
+            }
+
+

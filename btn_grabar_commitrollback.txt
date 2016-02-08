@@ -1,0 +1,139 @@
+if (txtCedulaDoctor.Text == "")
+            {
+                MessageBox.Show("No se permite guardar sin cedula doctor...");
+                txtCedulaDoctor.Focus();
+            }
+            else if (txtCedulaPaciente.Text == "")
+            {
+                MessageBox.Show("No se permite guardar sin cedula paciente...");
+                txtCedulaPaciente.Focus();
+            }
+            else if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show("No se permite guardar sin descripcion del problema...");
+                txtDescripcion.Focus();
+            }
+            else if (txtObjetivo.Text == "")
+            {
+                MessageBox.Show("No se permite guardar sin objetivos a llevar a cabo...");
+                txtObjetivo.Focus();
+            }
+            else if (txtPlanAccion.Text == "")
+            {
+                MessageBox.Show("No se permite guardar sin plan de accion ejecutado...");
+                txtPlanAccion.Focus();
+            }
+            else if (txtPrescripcion.Text == "")
+            {
+                MessageBox.Show("No se permite guardar sin informacion prescripcion...");
+                txtPrescripcion.Focus();
+            }
+            else
+            {
+                if (cModo == "Nuevo")
+                {
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection(Conexion.ConectionString);
+
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        // Step 3 - Comando a ejecutar                        
+                        myCommand.CommandText = "INSERT INTO casomedico(fecha, cedula_doctor, cedula_paciente, " +
+                            "problema_descripcion, problema_objetivo, problema_accion, problema_prescripcion) " + 
+                            "values(@fecha, @doctor, @paciente, @descripcion, @objetivo, @accion, @prescripcion)";
+                        myCommand.Parameters.AddWithValue("@fecha", txtFecha.Value.ToString("yyyy-MM-dd"));                        
+                        myCommand.Parameters.AddWithValue("@doctor", txtCedulaDoctor.Text);
+                        myCommand.Parameters.AddWithValue("@paciente", txtCedulaPaciente.Text);
+                        myCommand.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
+                        myCommand.Parameters.AddWithValue("@objetivo", txtObjetivo.Text);
+                        myCommand.Parameters.AddWithValue("@accion", txtPlanAccion.Text);
+                        myCommand.Parameters.AddWithValue("@prescripcion", txtPrescripcion.Text);
+
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
+                        MySqlTransaction myTranSact = MyConexion.BeginTransaction();
+
+                        // Step 5 - Executing the query
+                        myCommand.Transaction = myTranSact;
+                        int nResultado = myCommand.ExecuteNonQuery();
+
+                        if (nResultado > 0)
+                        {
+                            myTranSact.Commit();
+                            MessageBox.Show("Informacion Guardada Satisfactoriamente...");
+                        }
+                        else
+                        {
+                            myTranSact.Rollback();
+                            MessageBox.Show("No se pudo guardar la informacion...");
+                        }
+
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+                        myCommand.Dispose();
+                        
+                    }
+                    catch (Exception myEx)
+                    {
+                        MessageBox.Show(myEx.Message);
+                    }
+                }
+                else // en caso de que cModo = "Guardar"
+                {
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection(Conexion.ConectionString);
+
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        // Step 3 - Comando a ejecutar                        
+                        myCommand.CommandText = "UPDATE casomedico SET fecha = @fecha, cedula_doctor = @doctor, " +
+                            "cedula_paciente = @paciente, problema_descripcion = @descripcion, problema_objetivo = @objetivo, "+
+                            "problema_accion = @accion, problema_prescripcion = @prescripcion WHERE " +
+                            "idcasomedico = "+ txtRegistro.Text +"";
+                        myCommand.Parameters.AddWithValue("@fecha", txtFecha.Value.ToString("yyyy-MM-dd"));
+                        myCommand.Parameters.AddWithValue("@doctor", txtCedulaDoctor.Text);
+                        myCommand.Parameters.AddWithValue("@paciente", txtCedulaPaciente.Text);
+                        myCommand.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
+                        myCommand.Parameters.AddWithValue("@objetivo", txtObjetivo.Text);
+                        myCommand.Parameters.AddWithValue("@accion", txtPlanAccion.Text);
+                        myCommand.Parameters.AddWithValue("@prescripcion", txtPrescripcion.Text);
+
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
+                        MySqlTransaction myTranSact = MyConexion.BeginTransaction();
+
+                        // Step 5 - Executing the query
+                        myCommand.Transaction = myTranSact;
+                        int nResultado = myCommand.ExecuteNonQuery();
+
+                        if (nResultado > 0)
+                        {
+                            myTranSact.Commit();
+                            MessageBox.Show("Informacion Actualizada Satisfactoriamente...");
+                        }
+                        else
+                        {
+                            myTranSact.Rollback();
+                            MessageBox.Show("No se pudo actualizar la informacion...");
+                        }
+
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+                        myCommand.Dispose();
+                    }
+                    catch (Exception myEx)
+                    {
+                        MessageBox.Show(myEx.Message);
+                    }
+                }
+
+                this.cModo = "Inicio";
+                this.Botones();
+                this.Limpiar();
+            }

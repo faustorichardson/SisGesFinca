@@ -1,0 +1,4 @@
+cModo = "Nuevo";
+this.Limpiar();
+this.Botones();
+this.ProximoCodigo();

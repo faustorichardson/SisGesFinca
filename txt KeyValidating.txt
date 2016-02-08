@@ -1,0 +1,90 @@
+        private void txtCedula_Validating(object sender, CancelEventArgs e)
+        {
+            if (cModo != "Nuevo" || cModo != "Inicio")
+            {
+                if (txtCedula.MaskFull == false)
+                {
+                    MessageBox.Show("No se permiten busquedas con el campo cedula vacio...");
+                    txtCedula.Focus();
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        // Step 1 - clsConexion
+                        MySqlConnection MyclsConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                        // Step 2 - creating the command object
+                        MySqlCommand MyCommand = MyclsConexion.CreateCommand();
+
+                        // Step 3 - creating the commandtext
+                        MyCommand.CommandText = "SELECT id_paciente, cedula, rango, nombre, apellido, edad, sexo, dato_nacimiento, " +
+                            "dato_alimentacion, dato_condicionespsicologicas, dato_sexualidad, dato_operaciones, " +
+                            "dato_intoleranciamedicinal, dato_saludpadres, dato_saludhermanos, dato_saludesposahijos, " +
+                            "dato_saludfamiliargeneral, fecharegistro, fechaupdate FROM paciente " +
+                            "WHERE cedula = " + "'" + txtCedula.Text + "'" + "";
+
+                        // Step 4 - connection open
+                        MyclsConexion.Open();
+
+                        // Step 5 - Creating the DataReader                    
+                        MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                        // Step 6 - Verifying if Reader has rows
+                        if (MyReader.HasRows)
+                        {
+                            while (MyReader.Read())
+                            {
+                                txtID.Text = MyReader["id_paciente"].ToString();
+                                cmbRango.SelectedValue = MyReader["rango"].ToString();
+                                txtNombre.Text = MyReader["nombre"].ToString();
+                                txtApellido.Text = MyReader["apellido"].ToString();
+                                txtEdad.Text = MyReader["edad"].ToString();
+                                string sexo = MyReader["sexo"].ToString();
+                                if (sexo == "M")
+                                {
+                                    rbMasculino.Checked = true;
+                                }
+                                else
+                                {
+                                    rbFemenino.Checked = true;
+                                }
+                                txtNacimiento.Text = MyReader["dato_nacimiento"].ToString();
+                                txtAlimentacion.Text = MyReader["dato_alimentacion"].ToString();
+                                txtCondicionesPsicologicas.Text = MyReader["dato_condicionespsicologicas"].ToString();
+                                txtSexualidad.Text = MyReader["dato_sexualidad"].ToString();
+                                txtOperaciones.Text = MyReader["dato_operaciones"].ToString();
+                                txtIntoleranciaMedicinal.Text = MyReader["dato_intoleranciamedicinal"].ToString();
+                                txtSaludPadres.Text = MyReader["dato_saludpadres"].ToString();
+                                txtSaludHermanos.Text = MyReader["dato_saludhermanos"].ToString();
+                                txtSaludEsposaHijos.Text = MyReader["dato_saludesposahijos"].ToString();
+                                txtSaludFamiliarGeneral.Text = MyReader["dato_saludfamiliargeneral"].ToString();
+                                txtFechaRegistro.Value = Convert.ToDateTime(MyReader["fecharegistro"]);
+                                txtFechaUpdate.Value = Convert.ToDateTime(MyReader["fechaupdate"]);
+                            }
+
+                            this.cModo = "Buscar";
+                            this.Botones();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron registros con esta cedula...");
+                            this.cModo = "Inicio";
+                            this.Botones();
+                            this.Limpiar();
+                            this.txtCedula.Focus();
+                        }
+
+                        // Step 6 - Closing all
+                        MyReader.Close();
+                        MyCommand.Dispose();
+                        MyclsConexion.Close();
+                    }
+                    catch (Exception MyEx)
+                    {
+                        MessageBox.Show(MyEx.Message);
+                    }
+                }
+            }
+        }
